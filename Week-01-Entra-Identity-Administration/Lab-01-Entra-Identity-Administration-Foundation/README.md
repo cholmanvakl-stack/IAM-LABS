@@ -21,7 +21,7 @@ The Microsoft Entra tenant was inspected to establish a baseline of the IAM LABS
 
 ### Evidence
 
-![Entra Tenant Overview](/.Week-01-Entra-Identity-Administration)
+![Entra Tenant Overview](./Week-01-Entra-Identity-Administration/Lab-01-Entra-Identity-Administration-Foundation/01-entra-tenant-overview.png)
 
 ### Findings
 
