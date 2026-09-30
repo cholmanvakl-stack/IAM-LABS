@@ -96,6 +96,27 @@ The review focused on:
 
 ![Custom Domains](../screenshots/04-custom-domains.png)
 
+### Part 1.5: Tenant Properties Inspection
+
+The tenant's properties were reviewed to establish the current organization-level configuration of the Microsoft Entra environment.
+
+The review focused on:
+
+- Organization information
+- Tenant-level properties
+- Country/region configuration
+- Available tenant configuration settings
+
+No configuration changes were made during this inspection.
+
+### Evidence
+
+![Tenant Properties](../screenshots/05-tenant-properties.png)
+
+### Validation
+
+The tenant Properties page was reviewed directly in the Microsoft Entra admin center to verify the current tenant-level configuration.
+
 ### Validation
 
 The Custom domain names section was reviewed directly in the Microsoft Entra admin center to verify the tenant's current domain configuration.
