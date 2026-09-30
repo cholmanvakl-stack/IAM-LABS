@@ -16,7 +16,7 @@ Dedicated Microsoft Entra ID laboratory environment used to practice identity ad
 
 The IAM LABS Microsoft Entra tenant was inspected to establish the baseline identity environment.
 
-![Tenant Overview](./01-tenant-overview.png)
+![Tenant Overview](./01-entra-tenant-overview.png)
 
 ### Tenant Properties
 
