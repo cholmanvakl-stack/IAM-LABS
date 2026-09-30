@@ -36,7 +36,6 @@ The tenant overview was reviewed for:
 ### Evidence
 
 ![Tenant Overview](../screenshots/01-tenant-overview.png)
-![Tenant Overview](../screenshots/01-tenant-properties.png)
 
 ### Validation
 
