@@ -10,7 +10,7 @@ Inspect the existing IAM LABS tenant, bring the required objects into alignment,
 
 ## Lab Sections
 
-- [Part 1 — Tenant Inspection](./Day-01-Entra-Identity-Administration/documentation/tenant-inspection.md)
+- [Part 1 — Tenant Inspection](./documentation/tenant-inspection.md)
 - Part 2 — Identity Administration
 - Part 3 — Users and Groups
 - Part 4 — Administrative Roles
