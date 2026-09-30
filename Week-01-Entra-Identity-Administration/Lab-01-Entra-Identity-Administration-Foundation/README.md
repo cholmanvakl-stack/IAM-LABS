@@ -25,9 +25,9 @@ The Microsoft Entra tenant was inspected to establish a baseline of the IAM LABS
 
 ### Findings
 
-- Tenant name: **[ENTER TENANT NAME]**
-- Primary domain: **[ENTER PRIMARY DOMAIN]**
-- Tenant ID: **[ENTER TENANT ID OR "REDACTED"]**
+- Tenant name: **Default Directory**
+- Primary domain: **cholmanlabsoutlook.onmicrosoft.com**
+- Tenant ID: **Redacted**
 
 ---
 
@@ -41,9 +41,8 @@ The tenant properties were inspected to document the organization's basic Micros
 
 ### Findings
 
-- Country/region: **[ENTER VALUE]**
-- Initial domain: **[ENTER VALUE]**
-- Other relevant tenant properties: **[ENTER VALUES]**
+- Country/region: **United States**
+- Other relevant tenant properties: **Tenant ID, Technical Contact, etc.**
 
 ---
 
