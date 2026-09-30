@@ -120,3 +120,27 @@ The tenant Properties page was reviewed directly in the Microsoft Entra admin ce
 ### Validation
 
 The Custom domain names section was reviewed directly in the Microsoft Entra admin center to verify the tenant's current domain configuration.
+
+### Part 6: Tenant-Wide User Settings Inspection
+
+The tenant-wide User settings were reviewed to establish the current directory-level configuration affecting user behavior and access.
+
+The settings reviewed included:
+
+- Application registration by users
+- Security group creation by users
+- Guest user access restrictions
+- Access to the Microsoft Entra admin center
+- LinkedIn account connections
+- Keep user signed in behavior
+- External user collaboration settings
+
+No configuration changes were made during this inspection.
+
+### Evidence
+
+![Tenant-Wide User Settings](../screenshots/06-tenant-wide-settings.png)
+
+### Validation
+
+The User settings page was reviewed directly in the Microsoft Entra admin center to verify the current tenant-wide user configuration.
