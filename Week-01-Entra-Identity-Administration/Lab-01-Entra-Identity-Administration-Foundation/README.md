@@ -2,29 +2,80 @@
 
 ## Objective
 
-Inspect the existing IAM LABS tenant, verify the current identity-administration structure, and document the tenant's foundational Entra ID configuration.
+Inspect the existing IAM LABS Microsoft Entra tenant and document its foundational identity-administration configuration.
 
 ## Environment
 
-- Platform: Microsoft Entra ID
-- Tenant: IAM LABS
-- Lab: Week 1 — Lab 1
-- Focus: Entra identity administration
+- **Platform:** Microsoft Entra ID
+- **Tenant:** IAM LABS
+- **Lab:** Week 1 — Lab 1
+- **Focus:** Entra identity administration
 
-## Lab Sections
+---
 
-1. Tenant Inspection
-2. Tenant Configuration
-3. Administrative Roles
-4. Administrative Units
-5. Custom Domain
-6. Tenant-Wide Settings
-7. Findings and Documentation
+# Part 1 — Tenant Inspection
 
-## Evidence
+## 1. Tenant Overview
 
-Screenshots will be added throughout the lab to document the configuration and results.
+The Microsoft Entra tenant was inspected to establish a baseline of the IAM LABS identity environment.
 
-## Result
+### Evidence
 
-The tenant's foundational identity-administration structure was inspected and documented as the starting point for the IAM LABS portfolio.
+![Entra Tenant Overview](./01-entra-tenant-overview.png)
+
+### Findings
+
+- Tenant name: **[ENTER TENANT NAME]**
+- Primary domain: **[ENTER PRIMARY DOMAIN]**
+- Tenant ID: **[ENTER TENANT ID OR "REDACTED"]**
+
+---
+
+## 2. Tenant Properties
+
+The tenant properties were inspected to document the organization's basic Microsoft Entra tenant configuration.
+
+### Evidence
+
+![Tenant Properties](./02-tenant-properties.png)
+
+### Findings
+
+- Country/region: **[ENTER VALUE]**
+- Initial domain: **[ENTER VALUE]**
+- Other relevant tenant properties: **[ENTER VALUES]**
+
+---
+
+# Part 2 — Administrative Roles
+
+*To be completed.*
+
+# Part 3 — Administrative Units
+
+*To be completed.*
+
+# Part 4 — Custom Domain
+
+*To be completed.*
+
+# Part 5 — Tenant-Wide Settings
+
+*To be completed.*
+
+---
+
+# Lab Results
+
+*To be completed after all sections of Lab 1 are finished.*
+
+## Skills Demonstrated
+
+- Microsoft Entra tenant administration
+- Tenant configuration inspection
+- Identity administration
+- Microsoft Entra administrative roles
+- Administrative units
+- Domain configuration
+- Tenant-wide identity settings
+- Technical documentation
