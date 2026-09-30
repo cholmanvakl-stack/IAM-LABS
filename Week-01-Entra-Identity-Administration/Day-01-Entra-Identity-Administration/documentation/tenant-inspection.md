@@ -40,3 +40,25 @@ The tenant overview was reviewed for:
 ### Validation
 
 The tenant overview was reviewed directly in the Microsoft Entra admin center to confirm the current tenant environment before making administrative changes.
+
+### Administrative Role Inspection
+
+The Microsoft Entra administrative role structure was reviewed to identify how tenant-level administrative access is assigned.
+
+The **Global Administrator** role was inspected to determine the current assignment structure and identify the principals with the highest level of administrative access.
+
+The review focused on:
+
+- Current Global Administrator assignments
+- Assignment type
+- Administrative principals
+- Existing role configuration
+
+### Evidence
+
+![Global Administrator Role](../screenshots/02-global-administrator-role.png)
+
+### Validation
+
+The Global Administrator role was opened in the Microsoft Entra admin center and its assignment information was reviewed directly in the tenant.
+
