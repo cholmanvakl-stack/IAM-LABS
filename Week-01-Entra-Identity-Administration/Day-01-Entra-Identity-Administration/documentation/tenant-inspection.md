@@ -60,5 +60,24 @@ The review focused on:
 
 ### Validation
 
+### Part 1.3: Administrative Unit Inspection
+
+The tenant's Administrative Units configuration was inspected to determine whether administrative scope had been established for specific subsets of directory objects.
+
+The review focused on:
+
+- Existing Administrative Units
+- Administrative Unit membership
+- Administrative scope
+- Current configuration state
+
+### Evidence
+
+![Administrative Units](../screenshots/03-administrative-units.png)
+
+### Validation
+
+The Administrative Units section was reviewed directly in the Microsoft Entra admin center to establish the tenant's current administrative-scoping configuration.
+
 The Global Administrator role was opened in the Microsoft Entra admin center and its assignment information was reviewed directly in the tenant.
 
