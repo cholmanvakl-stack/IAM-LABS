@@ -21,16 +21,22 @@ Inspect the IAM LABS Microsoft Entra tenant and document its current identity-ad
 
 ## Findings
 
-Document observations from the lab here.
+### Tenant Overview
 
-## Evidence
+The IAM LABS tenant was inspected to establish a baseline of the current Microsoft Entra identity environment.
 
-Screenshots supporting the findings will be stored in the `screenshots` folder.
+The tenant overview was reviewed for:
 
-## Validation
+- Tenant name
+- Tenant ID
+- Primary domain
+- Tenant configuration
+- Basic tenant properties
 
-Document how the configuration was verified.
+### Evidence
 
-## Notes
+![Tenant Overview](../screenshots/01-tenant-overview.png)
 
-Additional observations or issues discovered during the lab.
+### Validation
+
+The tenant overview was reviewed directly in the Microsoft Entra admin center to confirm the current tenant environment before making administrative changes.
