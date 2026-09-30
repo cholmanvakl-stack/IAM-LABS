@@ -1,4 +1,4 @@
-# Part 1.1: Tenant Inspection
+# Tenant Inspection
 
 ## Objective
 
@@ -21,7 +21,7 @@ Inspect the IAM LABS Microsoft Entra tenant and document its current identity-ad
 
 ## Findings
 
-### Tenant Overview
+### Part 1.1: Tenant Overview
 
 The IAM LABS tenant was inspected to establish a baseline of the current Microsoft Entra identity environment.
 
@@ -41,7 +41,7 @@ The tenant overview was reviewed for:
 
 The tenant overview was reviewed directly in the Microsoft Entra admin center to confirm the current tenant environment before making administrative changes.
 
-### Administrative Role Inspection
+### Part 1.2: Administrative Role Inspection
 
 The Microsoft Entra administrative role structure was reviewed to identify how tenant-level administrative access is assigned.
 
