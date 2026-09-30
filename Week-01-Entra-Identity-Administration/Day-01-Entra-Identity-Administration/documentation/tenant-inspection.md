@@ -81,3 +81,21 @@ The Administrative Units section was reviewed directly in the Microsoft Entra ad
 
 The Global Administrator role was opened in the Microsoft Entra admin center and its assignment information was reviewed directly in the tenant.
 
+### Part 1.3: Custom Domain Inspection
+
+The tenant's custom domain configuration was reviewed to identify the domains currently associated with the Microsoft Entra tenant.
+
+The review focused on:
+
+- Default `onmicrosoft.com` domain
+- Configured custom domains
+- Domain verification status
+- Primary/default domain configuration, where applicable
+
+### Evidence
+
+![Custom Domains](../screenshots/04-custom-domains.png)
+
+### Validation
+
+The Custom domain names section was reviewed directly in the Microsoft Entra admin center to verify the tenant's current domain configuration.
