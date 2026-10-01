@@ -5,7 +5,7 @@
 - **Member user** → Internal organizational identity.
 - **Guest user** → External identity invited to collaborate.
 - Users can be created, modified, disabled, deleted, and restored.
-  **How they connect:** Users are the identities that receive access, licenses, and group memberships.
+- **How they connect:** Users are the identities that receive access, licenses, and group memberships.
 
 ### User Properties
 **User properties** → Information used to identify and manage a user.
