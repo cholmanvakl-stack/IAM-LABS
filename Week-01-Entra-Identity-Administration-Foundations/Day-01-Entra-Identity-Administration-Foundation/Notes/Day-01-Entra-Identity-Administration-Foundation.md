@@ -4,26 +4,39 @@
 
 **Microsoft Entra ID** → Cloud-based identity and access management service.
 
-- Manages identities and access.
 - Provides authentication and authorization.
-- Contains users, groups, devices, applications, and administrative configuration.
+- Manages identities and access.
+- Contains identity objects and configuration for the organization.
 
 **How they connect:**  
-Entra ID provides the identity foundation used to authenticate identities and control access to resources.
+Entra ID provides the identity foundation used to authenticate users and control access to organizational resources.
+
+---
+
+## Company Branding
+
+**Company branding** → Customizes the Microsoft Entra sign-in experience.
+
+- Can customize the sign-in page.
+- Can add organization branding such as logos and images.
+- Can provide organization-specific sign-in text.
+
+**How they connect:**  
+Company branding changes the user's sign-in experience while Entra ID continues to handle authentication.
 
 ---
 
 ## Microsoft Entra Roles
 
-**Microsoft Entra role** → Defines what administrative actions an identity can perform in Entra ID.
+**Microsoft Entra role** → Defines administrative permissions in Entra ID.
 
 - **Built-in role** → Predefined permissions for common administrative tasks.
-- **Custom role** → Custom permissions created for specific administrative requirements.
-- Roles can be assigned to users, groups, or service principals.
+- **Custom role** → Custom permissions for specific administrative requirements.
+- Roles can be assigned to users, groups, and service principals.
 - **Global Administrator** → Broad administrative access across the tenant.
 
 **How they connect:**  
-Roles determine **what** an administrator can do in Entra ID.
+Roles determine **what** administrative actions an identity can perform.
 
 ---
 
@@ -33,74 +46,111 @@ Roles determine **what** an administrator can do in Entra ID.
 
 - Can contain users, groups, and devices.
 - Supports delegated administration.
-- Allows administrators to manage specific objects without requiring tenant-wide access.
+- Allows administration of specific objects without requiring tenant-wide permissions.
 - Does not create a separate tenant.
 
 **How they connect:**  
-Administrative Units help control **where** an administrator can perform certain management tasks.
+Administrative Units help determine **where** delegated administrators can manage objects.
 
 ---
 
 ## Role Permissions
 
-**Role permissions** → The specific actions an Entra role allows an administrator to perform.
+**Role permissions** → The individual actions allowed by an Entra role.
 
-- Roles contain permissions.
-- Different roles provide different levels of access.
-- Least privilege means assigning only the permissions required.
-- Custom roles can provide more specific permissions when built-in roles are not appropriate.
+- Different roles provide different permissions.
+- Built-in roles provide predefined permission sets.
+- Custom roles provide more specific permissions.
+- Follow **least privilege** → Give administrators only the permissions they need.
 
 **How they connect:**  
-A role defines the permissions available to an administrator; the assignment and administrative scope determine where those permissions can be used.
+Roles determine **what** an administrator can do; Administrative Units can help determine **which objects** the administrator can manage.
 
 ---
 
 ## Custom Domains
 
-**Custom domain** → An organization's own domain name added to Microsoft Entra ID.
+**Custom domain** → An organization's domain added to Microsoft Entra ID.
 
 Example:
 
 `contoso.com`
 
-- The initial tenant domain uses the `onmicrosoft.com` domain.
-- A custom domain can be added for organizational identities.
-- The domain must be verified before it can be used.
-- Only verified domains can be used for supported identity configuration.
+- New tenants receive an initial `onmicrosoft.com` domain.
+- Organizations can add their own domain.
+- A custom domain must be **verified** before it can be used.
+- A verified domain can be used for organizational identities.
 
 **How they connect:**  
-Custom domains allow the Entra tenant to use an organization's own domain instead of relying only on the default tenant domain.
+Custom domains allow the organization to use its own domain name within Microsoft Entra ID.
 
 ---
 
-## Tenant-wide Settings
+## Tenant-Wide Settings
 
-**Tenant-wide settings** → Configuration that affects the Microsoft Entra tenant broadly.
+**Tenant-wide settings** → Configuration that applies broadly across the Microsoft Entra tenant.
 
-Examples include:
+Examples:
 
 - User settings
 - External collaboration settings
-- Application settings
-- Other organization-wide identity configuration
-
-Changes can affect users or services throughout the tenant.
+- Application-related settings
+- Organization-wide identity configuration
 
 **How they connect:**  
-Tenant-wide settings establish configuration that applies broadly across the Entra environment rather than to one individual object.
+Tenant-wide settings establish behavior that can affect the broader Entra environment instead of one individual object.
 
 ---
 
-## Company Branding
+## Tenant
 
-**Company branding** → Customizes the organization's Microsoft Entra sign-in experience.
+**Tenant** → A dedicated Microsoft Entra environment for an organization.
 
-Can include:
-
-- Organization logo
-- Background image
-- Sign-in page appearance
-- Organization-specific text
+- Contains the organization's identity configuration.
+- Has its own directory.
+- Uses a tenant-specific domain.
+- Contains users, groups, devices, applications, and administrative configuration.
 
 **How they connect:**  
-Company branding changes the appearance and messaging of the authentication experience without changing the underlying authentication process.
+The tenant is the overall Entra environment in which identity and access administration occurs.
+
+---
+
+## Delegated Administration
+
+**Delegated administration** → Giving an administrator responsibility for a defined scope instead of the entire tenant.
+
+- Uses administrative roles.
+- Administrative Units can provide the administrative scope.
+- Supports least-privilege administration.
+
+**How they connect:**  
+Roles provide the administrator's permissions, while Administrative Units can restrict the objects within the administrator's scope.
+
+---
+
+## Day 1 Core Relationships
+
+**Tenant**  
+→ Contains the Entra environment
+
+**Roles**  
+→ Define what an administrator can do
+
+**Administrative Units**  
+→ Define an administrative scope
+
+**Role permissions**  
+→ Define the specific actions allowed
+
+**Custom domains**  
+→ Provide the organization's verified domain
+
+**Tenant-wide settings**  
+→ Configure behavior across the tenant
+
+**Company branding**  
+→ Customizes the sign-in experience
+
+**How they connect:**  
+Microsoft Entra ID provides the tenant-wide identity platform. Roles provide administrative permissions, Administrative Units support delegated scope, custom domains establish organizational identity naming, tenant-wide settings configure broad behavior, and company branding customizes the authentication experience.
