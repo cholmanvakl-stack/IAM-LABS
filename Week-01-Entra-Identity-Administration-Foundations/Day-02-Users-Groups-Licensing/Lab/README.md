@@ -21,7 +21,7 @@ The existing users in the IAM LABS tenant were inspected to understand the tenan
 
 ### Evidence
 
-![User Overview](screenshots/01-user-overview.png)
+![User Overview](screenshot/01-user-overview.png)
 
 **Screenshot:** `01-user-overview.png`
 
@@ -37,7 +37,7 @@ No user properties were modified.
 
 ### Evidence
 
-![User Properties](screenshots/02-user-properties.png)
+![User Properties](screenshot/02-user-properties.png)
 
 **Screenshot:** `02-user-properties.png`
 
@@ -53,7 +53,7 @@ No existing users were deleted during the lab.
 
 ### Evidence
 
-![Deleted Users](screenshots/03-deleted-users.png)
+![Deleted Users](screenshot/03-deleted-users.png)
 
 **Screenshot:** `03-deleted-users.png`
 
@@ -69,7 +69,7 @@ The group's membership configuration was reviewed without making changes.
 
 ### Evidence
 
-![Group Overview](screenshots/04-group-overview.png)
+![Group Overview](screenshot/04-group-overview.png)
 
 **Screenshot:** `04-group-overview.png`
 
@@ -85,7 +85,7 @@ No members were added or removed.
 
 ### Evidence
 
-![Group Membership](screenshots/05-group-membership.png)
+![Group Membership](screenshot/05-group-membership.png)
 
 **Screenshot:** `05-group-membership.png`
 
@@ -101,7 +101,7 @@ No licenses were purchased, assigned, or removed during the lab.
 
 ### Evidence
 
-![Licenses Overview](screenshots/06-licenses-overview.png)
+![Licenses Overview](screenshot/06-licenses-overview.png)
 
 **Screenshot:** `06-licenses-overview.png`
 
@@ -117,7 +117,7 @@ No license assignments were changed.
 
 ### Evidence
 
-![User Licenses](screenshots/07-user-licenses.png)
+![User Licenses](screenshot/07-user-licenses.png)
 
 **Screenshot:** `07-user-licenses.png`
 
@@ -135,7 +135,7 @@ No group was created.
 
 ### Evidence
 
-![Dynamic Group Membership](screenshots/08-dynamic-group-membership.png)
+![Dynamic Group Membership](screenshot/08-dynamic-group-membership.png)
 
 **Screenshot:** `08-dynamic-group-membership.png`
 
@@ -149,7 +149,7 @@ An existing user's group memberships were inspected to understand the relationsh
 
 ### Evidence
 
-![User Group Membership](screenshots/09-user-group-membership.png)
+![User Group Membership](screenshot/09-user-group-membership.png)
 
 **Screenshot:** `09-user-group-membership.png`
 
