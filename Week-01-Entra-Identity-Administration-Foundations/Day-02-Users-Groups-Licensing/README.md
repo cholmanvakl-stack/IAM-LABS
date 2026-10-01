@@ -12,8 +12,7 @@
 - Includes name, contact, job, department, and account information.
 - **User Principal Name (UPN)** → User's sign-in name.
 - User properties can be used in dynamic group membership rules.
-  
-**How they connect:** User properties describe the identity and can influence automated identity management.
+  **How they connect:** User properties describe the identity and can influence automated identity management.
 
 ### User Lifecycle
 **User lifecycle** → Management of a user from creation through removal.
