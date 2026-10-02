@@ -2,9 +2,9 @@
 
 ## Overview
 
-Day 3 focused on managing external identities and controlling collaboration between organizational and external users in Microsoft Entra ID.
+Day 3 focused on managing external identities and controlling external collaboration within Microsoft Entra ID.
 
-The study material covered guest users, B2B collaboration, external collaboration settings, external user invitations, external user management, dynamic groups for external users, Microsoft Entra Verified ID, external identity providers, and cross-tenant access.
+The study material and hands-on lab covered guest users, B2B collaboration, external collaboration settings, guest invitations, external user management, dynamic groups, cross-tenant access, and external identity providers.
 
 ---
 
@@ -22,9 +22,8 @@ Implement and manage external identities
 - External user invitations
 - External user management
 - Dynamic groups for external users
-- Microsoft Entra Verified ID
-- External identity providers
 - Cross-tenant access
+- External identity providers
 
 ---
 
@@ -44,7 +43,7 @@ Implement and manage external identities
 
 ### Guest Users
 
-Understanding how external identities are represented as guest users within a Microsoft Entra tenant.
+Understanding how external identities are represented and managed as guest users within Microsoft Entra ID.
 
 ### B2B Collaboration
 
@@ -52,27 +51,42 @@ Understanding how external users can access organizational resources through Mic
 
 ### External Collaboration
 
-Understanding how collaboration settings control guest invitations, domain restrictions, and guest access.
+Understanding how guest invitation and collaboration settings control external access.
 
 ### External User Management
 
-Understanding how guest identities are managed after they are created.
+Understanding how guest identities are administered after they are invited.
 
 ### Dynamic Groups
 
 Understanding how user attributes can automatically determine group membership for external identities.
 
-### External Identity Providers
-
-Understanding how external identity providers authenticate external users.
-
 ### Cross-Tenant Access
 
 Understanding inbound and outbound access between Microsoft Entra organizations.
 
-### Verified ID
+### External Identity Providers
 
-Understanding the role of verifiable digital credentials in external identity scenarios.
+Understanding how external identity providers participate in authentication for external identities.
+
+---
+
+## Evidence
+
+The lab contains screenshots documenting:
+
+1. External Identities Overview
+2. External Collaboration Settings
+3. Guest Invitation
+4. Guest User Management
+5. Dynamic Guest Group
+6. Cross-Tenant Default Settings
+7. Cross-Tenant Inbound Access
+8. External Identity Providers
+
+All evidence is located in:
+
+`Lab/screenshots/`
 
 ---
 
@@ -83,8 +97,8 @@ Understanding the role of verifiable digital credentials in external identity sc
 - External identity management
 - External collaboration configuration
 - Dynamic group concepts
+- Cross-tenant access
 - External identity provider concepts
-- Cross-tenant access concepts
 - Identity lifecycle management
 - Technical documentation
 - Evidence-based IAM administration
@@ -93,8 +107,6 @@ Understanding the role of verifiable digital credentials in external identity sc
 
 ## Completion Status
 
-**Day 03 — Study Material & Notes Complete**
+**Day 03 — Complete**
 
-Microsoft Learn material evaluated and study notes created.
-
-**Lab — Pending**
+Microsoft Learn material evaluated, study notes created, hands-on lab completed, evidence captured, and GitHub portfolio documentation created.
