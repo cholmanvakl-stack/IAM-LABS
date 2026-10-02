@@ -13,7 +13,7 @@ Inspect and document the user, group, membership, and licensing structure of the
 
 # Part 1 — User Administration
 
-## Step 1 — Inspect Existing Users (Week-01-Entra-Identity-Administration-Foundations/PowerShell/Day-02-Users-Groups-Licensing/User-Administration/01-Get-Users.ps1)
+## Step 1 — Inspect Existing Users
 
 Microsoft Entra ID → Users → All users
 
