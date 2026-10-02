@@ -86,7 +86,7 @@ The lab contains screenshots documenting:
 
 All evidence is located in:
 
-`Lab/screenshots/`
+`Labs/Screenshots/`
 
 ---
 
