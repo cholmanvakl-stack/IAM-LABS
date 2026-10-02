@@ -35,7 +35,7 @@ Implement and manage external identities
 
 ## Lab
 
-[Day 3 Lab — External Identity Administration](Lab/README.md)
+[Day 3 Lab — External Identity Administration](Labs/README.md)
 
 ---
 
