@@ -5,13 +5,14 @@
 - Used for collaboration with people outside the organization.
 - Guest users can be assigned groups, roles, licenses, and resource access.
 - **User type: Guest** identifies an external user.
-**How they connect:** Guest users provide the identity representation needed for external collaboration.
+  **How they connect:** Guest users provide the identity representation needed for external collaboration.
 
 ### B2B Collaboration
 **Microsoft Entra B2B collaboration** → Allows external users to access an organization's resources using their own identity.
 - External users are represented as guest users in the resource tenant.
 - The resource tenant controls the guest's access.
 - The external user's home tenant remains the source of their identity.
+
 **How they connect:** B2B connects an external identity to resources in another organization.
 
 ### External Collaboration Settings
@@ -19,6 +20,7 @@
 - Control who can invite external users.
 - Can restrict external collaboration by domain.
 - Control guest access to directory information.
+
 **How they connect:** External collaboration settings establish the organization's general rules for guest access.
 
 ### External User Invitations
@@ -26,6 +28,7 @@
 - External users can be invited individually or in bulk.
 - Invitations establish the guest relationship.
 - The invited identity can then access permitted resources.
+
 **How they connect:** Invitations create the guest identity used for B2B collaboration.
 
 ### External User Management
