@@ -27,7 +27,7 @@ Inspect and document the Microsoft Entra configuration used to manage external i
 
 **Screenshot:**
 
-![External Identities Overview](screenshots/01-external-identities-overview.png)
+![External Identities Overview](Screenshots/01-external-identities-overview.png)
 
 **Evidence:**  
 This screenshot documents the tenant's External Identities administration area.
@@ -50,7 +50,7 @@ This screenshot documents the tenant's External Identities administration area.
 
 **Screenshot:**
 
-![External Collaboration Settings](screenshots/02-external-collaboration-settings.png)
+![External Collaboration Settings](Screenshots/02-external-collaboration-settings.png)
 
 **Evidence:**  
 This screenshot documents the tenant's current external collaboration configuration.
@@ -81,7 +81,7 @@ No settings were changed during this inspection.
 
 **Screenshot:**
 
-![Guest Invitation Configuration](screenshots/03-guest-invite-settings.png)
+![Guest Invitation Configuration](Screenshots/03-guest-invite-settings.png)
 
 **Evidence:**  
 This screenshot documents the administrative workflow used to invite an external identity.
@@ -110,7 +110,7 @@ No invitation was sent.
 
 **Screenshot:**
 
-![Guest User Management](screenshots/04-guest-user-management.png)
+![Guest User Management](Screenshots/04-guest-user-management.png)
 
 **Evidence:**  
 This screenshot documents how guest identities are identified and managed within the tenant.
@@ -153,7 +153,7 @@ Example condition:
 
 **Screenshot:**
 
-![Dynamic Guest Group](screenshots/05-dynamic-guest-group.png)
+![Dynamic Guest Group](Screenshots/05-dynamic-guest-group.png)
 
 **Evidence:**  
 This screenshot demonstrates how Microsoft Entra can automatically identify and group external users based on identity attributes.
@@ -180,7 +180,7 @@ The dynamic group was not saved or created.
 
 **Screenshot:**
 
-![Cross-Tenant Default Settings](screenshots/06-cross-tenant-default-settings.png)
+![Cross-Tenant Default Settings](Screenshots/06-cross-tenant-default-settings.png)
 
 **Evidence:**  
 This screenshot documents the tenant's default cross-tenant collaboration policy.
@@ -207,7 +207,7 @@ No default settings were modified.
 
 **Screenshot:**
 
-![Cross-Tenant Inbound Access](screenshots/07-cross-tenant-inbound-access.png)
+![Cross-Tenant Inbound Access](Screenshots/07-cross-tenant-inbound-access.png)
 
 **Evidence:**  
 This screenshot documents how the tenant controls inbound collaboration from other Microsoft Entra organizations.
@@ -235,7 +235,7 @@ No inbound access configuration was modified.
 
 **Screenshot:**
 
-![External Identity Providers](screenshots/08-identity-providers.png)
+![External Identity Providers](Screenshots/08-identity-providers.png)
 
 **Evidence:**  
 This screenshot documents where external authentication providers are configured within Microsoft Entra.
