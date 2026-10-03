@@ -1,48 +1,4 @@
-# Dynamic Entra ID User Search
-
-## Interactive User Search
-
-```powershell
-# Get all users with the properties needed for searching
-$Users = Get-MgUser -All -Property DisplayName,UserPrincipalName,Mail,JobTitle,Department,UserType,AccountEnabled
-
-# Ask for search input
-$Search = Read-Host "Enter part of the user's name, UPN, email, department, or job title"
-
-# Search user properties
-$Results = $Users | Where-Object {
-    $_.DisplayName -like "*$Search*" -or
-    $_.UserPrincipalName -like "*$Search*" -or
-    $_.Mail -like "*$Search*" -or
-    $_.JobTitle -like "*$Search*" -or
-    $_.Department -like "*$Search*" -or
-    $_.UserType -like "*$Search*"
-}
-
-# Display results
-$Results |
-    Select-Object DisplayName,UserPrincipalName,Mail,JobTitle,Department,UserType,AccountEnabled |
-    Format-Table -AutoSize
-```
-
-### Example
-
-```text
-Enter part of the user's name, UPN, email, department, or job title: helpdesk
-```
-
-Could return:
-
-```text
-DisplayName     UserPrincipalName       Mail                    JobTitle              Department
------------     -----------------       ----                    --------              ----------
-Alex Johnson    alex@contoso.com        alex@contoso.com        Help Desk Technician  IT
-Sarah Miller    sarah@contoso.com       sarah@contoso.com       Help Desk Technician  IT
-```
-
-## Reusable Function
-
-For repeated administrative work, turn it into a function:
+# Dynamic Wildcard Entra ID User Search
 
 ```powershell
 function Search-EntraUser {
@@ -52,34 +8,72 @@ function Search-EntraUser {
         [string]$Search
     )
 
+    # Automatically add wildcards to the search term
+    $WildcardSearch = "*$Search*"
+
     Get-MgUser -All -Property DisplayName,UserPrincipalName,Mail,JobTitle,Department,UserType,AccountEnabled |
         Where-Object {
-            $_.DisplayName -like "*$Search*" -or
-            $_.UserPrincipalName -like "*$Search*" -or
-            $_.Mail -like "*$Search*" -or
-            $_.JobTitle -like "*$Search*" -or
-            $_.Department -like "*$Search*" -or
-            $_.UserType -like "*$Search*"
+            $_.DisplayName -like $WildcardSearch -or
+            $_.UserPrincipalName -like $WildcardSearch -or
+            $_.Mail -like $WildcardSearch -or
+            $_.JobTitle -like $WildcardSearch -or
+            $_.Department -like $WildcardSearch
         } |
         Select-Object DisplayName,UserPrincipalName,Mail,JobTitle,Department,UserType,AccountEnabled |
         Format-Table -AutoSize
 }
 ```
 
-Then you can simply run:
+## Run the Search
+
+You only enter the value you want to search for:
 
 ```powershell
-Search-EntraUser -Search "Alex"
+Search-EntraUser -Search "alex"
 ```
 
-Or:
+The function automatically searches as:
 
 ```powershell
-Search-EntraUser -Search "Help Desk"
+*alex*
 ```
 
-Or:
+### Examples
 
 ```powershell
-Search-EntraUser -Search "HR"
+Search-EntraUser -Search "alex"
 ```
+
+Searches for `alex` anywhere in:
+
+- Display name
+- UPN
+- Email
+- Job title
+- Department
+
+```powershell
+Search-EntraUser -Search "help"
+```
+
+Can find users with `help` anywhere in their job title or other searchable properties.
+
+```powershell
+Search-EntraUser -Search "contoso"
+```
+
+Can find users whose UPN or email contains `contoso`.
+
+### How they connect:
+
+`$Search` → administrator's input
+
+`*$Search*` → automatically converts the input into a wildcard search
+
+`Get-MgUser -All` → retrieves the tenant's users
+
+`Where-Object` → checks multiple user properties
+
+`Select-Object` → displays only the relevant identity information
+
+`Format-Table` → presents the results in a readable format
