@@ -1,51 +1,29 @@
-# ============================================
-# Dynamic Entra ID User Search
-# Microsoft Graph PowerShell
-# ============================================
+$Search = Read-Host "Enter part of the user display name"
 
-# Ask for a search string
-$Search = Read-Host "Enter part of the user's display name"
+$Wildcard = "*$Search*"
 
-# Automatically add wildcards
-$WildcardSearch = "*$Search*"
+$Users = Get-MgUser -All -Property DisplayName,UserPrincipalName,UserType,AccountEnabled,BusinessPhones,MobilePhone,Mail,JobTitle,Department
 
-# Get users and required properties
-$Users = Get-MgUser -All -Property Id,DisplayName,UserPrincipalName,UserType,AccountEnabled,BusinessPhones,MobilePhone |
-    Where-Object {
-        $_.DisplayName -like $WildcardSearch
-    }
+$Results = $Users | Where-Object { $_.DisplayName -like $Wildcard }
 
-# Check if users were found
-if (-not $Users) {
-
+if ($Results) {
     Write-Host ""
-    Write-Host "No users found matching: $Search" -ForegroundColor Yellow
+    Write-Host "Users found matching '$Search':" -ForegroundColor Green
     Write-Host ""
 
+    $Results | Select-Object `
+        DisplayName,
+        UserPrincipalName,
+        UserType,
+        @{Name="AccountStatus";Expression={if ($_.AccountEnabled) {"Enabled"} else {"Disabled"}}},
+        Mail,
+        BusinessPhones,
+        MobilePhone,
+        JobTitle,
+        Department |
+        Format-List
 }
 else {
-
     Write-Host ""
-    Write-Host "Found $($Users.Count) user(s) matching: $Search" -ForegroundColor Green
-    Write-Host ""
-
-    foreach ($User in $Users) {
-
-        Write-Host "============================================" -ForegroundColor Cyan
-        Write-Host "Display Name:   $($User.DisplayName)"
-        Write-Host "UPN:            $($User.UserPrincipalName)"
-        Write-Host "User Type:      $($User.UserType)"
-
-        if ($User.AccountEnabled) {
-            Write-Host "User Status:    Enabled" -ForegroundColor Green
-        }
-        else {
-            Write-Host "User Status:    Disabled" -ForegroundColor Red
-        }
-
-        Write-Host "Business Phone: $($User.BusinessPhones -join ', ')"
-        Write-Host "Mobile Phone:   $($User.MobilePhone)"
-        Write-Host "============================================" -ForegroundColor Cyan
-        Write-Host ""
-    }
+    Write-Host "No users found matching '$Search'." -ForegroundColor Yellow
 }
