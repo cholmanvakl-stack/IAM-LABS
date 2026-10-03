@@ -1,55 +1,85 @@
-# Get Entra ID User Properties with Microsoft Graph
+# Dynamic Entra ID User Search
 
-## Get a Specific User
-
-```powershell
-Get-MgUser -UserId "user@domain.com"
-```
-
-Returns the default properties for a specific Entra ID user.
-
-## Get All User Properties
+## Interactive User Search
 
 ```powershell
-Get-MgUser -UserId "user@domain.com" -Property *
+# Get all users with the properties needed for searching
+$Users = Get-MgUser -All -Property DisplayName,UserPrincipalName,Mail,JobTitle,Department,UserType,AccountEnabled
+
+# Ask for search input
+$Search = Read-Host "Enter part of the user's name, UPN, email, department, or job title"
+
+# Search user properties
+$Results = $Users | Where-Object {
+    $_.DisplayName -like "*$Search*" -or
+    $_.UserPrincipalName -like "*$Search*" -or
+    $_.Mail -like "*$Search*" -or
+    $_.JobTitle -like "*$Search*" -or
+    $_.Department -like "*$Search*" -or
+    $_.UserType -like "*$Search*"
+}
+
+# Display results
+$Results |
+    Select-Object DisplayName,UserPrincipalName,Mail,JobTitle,Department,UserType,AccountEnabled |
+    Format-Table -AutoSize
 ```
 
-Returns all available Microsoft Graph user properties.
+### Example
 
-## Get Specific Properties
+```text
+Enter part of the user's name, UPN, email, department, or job title: helpdesk
+```
+
+Could return:
+
+```text
+DisplayName     UserPrincipalName       Mail                    JobTitle              Department
+-----------     -----------------       ----                    --------              ----------
+Alex Johnson    alex@contoso.com        alex@contoso.com        Help Desk Technician  IT
+Sarah Miller    sarah@contoso.com       sarah@contoso.com       Help Desk Technician  IT
+```
+
+## Reusable Function
+
+For repeated administrative work, turn it into a function:
 
 ```powershell
-Get-MgUser -UserId "user@domain.com" -Property DisplayName,UserPrincipalName,Mail,JobTitle,Department,AccountEnabled
+function Search-EntraUser {
+
+    param(
+        [Parameter(Mandatory)]
+        [string]$Search
+    )
+
+    Get-MgUser -All -Property DisplayName,UserPrincipalName,Mail,JobTitle,Department,UserType,AccountEnabled |
+        Where-Object {
+            $_.DisplayName -like "*$Search*" -or
+            $_.UserPrincipalName -like "*$Search*" -or
+            $_.Mail -like "*$Search*" -or
+            $_.JobTitle -like "*$Search*" -or
+            $_.Department -like "*$Search*" -or
+            $_.UserType -like "*$Search*"
+        } |
+        Select-Object DisplayName,UserPrincipalName,Mail,JobTitle,Department,UserType,AccountEnabled |
+        Format-Table -AutoSize
+}
 ```
 
-Retrieves only the properties needed for the task.
-
-## Format the Output
+Then you can simply run:
 
 ```powershell
-Get-MgUser -UserId "user@domain.com" -Property DisplayName,UserPrincipalName,Mail,JobTitle,Department,AccountEnabled |
-    Select-Object DisplayName,UserPrincipalName,Mail,JobTitle,Department,AccountEnabled
+Search-EntraUser -Search "Alex"
 ```
 
-## Get All Users
+Or:
 
 ```powershell
-Get-MgUser -All -Property DisplayName,UserPrincipalName,Mail,JobTitle,Department,AccountEnabled
+Search-EntraUser -Search "Help Desk"
 ```
 
-Retrieves the selected properties for every user in the Entra ID tenant.
+Or:
 
-### Key Properties
-
-- `DisplayName` → User's display name
-- `UserPrincipalName` → User's sign-in name
-- `Mail` → User's email address
-- `JobTitle` → User's job title
-- `Department` → User's department
-- `AccountEnabled` → Whether the account is enabled
-- `UserType` → `Member` or `Guest`
-- `Id` → Unique Microsoft Graph user ID
-
-### How they connect:
-
-`Get-MgUser` retrieves Entra ID user objects through Microsoft Graph. The `-Property` parameter controls which properties are returned, while `Select-Object` controls how the results are displayed.
+```powershell
+Search-EntraUser -Search "HR"
+```
