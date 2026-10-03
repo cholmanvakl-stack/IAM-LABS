@@ -1,79 +1,86 @@
-# Dynamic Wildcard Entra ID User Search
+# Dynamic Entra User Lookup
 
 ```powershell
-function Search-EntraUser {
+# Ask for search input
+$Search = Read-Host "Enter part of the user's display name"
 
-    param(
-        [Parameter(Mandatory)]
-        [string]$Search
-    )
+# Automatically create wildcard search
+$WildcardSearch = "*$Search*"
 
-    # Automatically add wildcards to the search term
-    $WildcardSearch = "*$Search*"
+# Find users whose DisplayName contains the search string
+$Users = Get-MgUser -All -Property Id,DisplayName |
+    Where-Object {
+        $_.DisplayName -like $WildcardSearch
+    }
 
-    Get-MgUser -All -Property DisplayName,UserPrincipalName,Mail,JobTitle,Department,UserType,AccountEnabled |
-        Where-Object {
-            $_.DisplayName -like $WildcardSearch -or
-            $_.UserPrincipalName -like $WildcardSearch -or
-            $_.Mail -like $WildcardSearch -or
-            $_.JobTitle -like $WildcardSearch -or
-            $_.Department -like $WildcardSearch
-        } |
-        Select-Object DisplayName,UserPrincipalName,Mail,JobTitle,Department,UserType,AccountEnabled |
-        Format-Table -AutoSize
+# Check whether any users were found
+if ($Users.Count -eq 0) {
+    Write-Host "No users found matching '$Search'."
+}
+else {
+    Write-Host "`nFound $($Users.Count) user(s):`n"
+
+    # Retrieve all properties for each matching user
+    foreach ($User in $Users) {
+
+        Write-Host "==============================" -ForegroundColor Cyan
+        Write-Host "User: $($User.DisplayName)" -ForegroundColor Green
+        Write-Host "==============================" -ForegroundColor Cyan
+
+        Get-MgUser -UserId $User.Id -Property * |
+            Format-List *
+    }
 }
 ```
 
-## Run the Search
+### Example
 
-You only enter the value you want to search for:
+When you run:
 
 ```powershell
-Search-EntraUser -Search "alex"
+.\Search-EntraUser.ps1
 ```
 
-The function automatically searches as:
+You will be prompted:
 
-```powershell
+```text
+Enter part of the user's display name: alex
+```
+
+If the tenant contains:
+
+```text
+Alex Johnson
+Alex Smith
+Alexander Brown
+```
+
+the script finds all three because the search automatically becomes:
+
+```text
 *alex*
 ```
 
-### Examples
+It then performs:
 
 ```powershell
-Search-EntraUser -Search "alex"
+Get-MgUser -UserId <UserId> -Property *
 ```
 
-Searches for `alex` anywhere in:
-
-- Display name
-- UPN
-- Email
-- Job title
-- Department
-
-```powershell
-Search-EntraUser -Search "help"
-```
-
-Can find users with `help` anywhere in their job title or other searchable properties.
-
-```powershell
-Search-EntraUser -Search "contoso"
-```
-
-Can find users whose UPN or email contains `contoso`.
+for **each matching user**, giving you their full Microsoft Graph user properties.
 
 ### How they connect:
 
-`$Search` → administrator's input
+`Read-Host` → collects the administrator's search string
 
-`*$Search*` → automatically converts the input into a wildcard search
+`*$Search*` → automatically creates the wildcard
 
-`Get-MgUser -All` → retrieves the tenant's users
+`Get-MgUser -All` → searches the tenant's users
 
-`Where-Object` → checks multiple user properties
+`Where-Object` → matches the wildcard against `DisplayName`
 
-`Select-Object` → displays only the relevant identity information
+`$User.Id` → identifies each matching Entra user
 
-`Format-Table` → presents the results in a readable format
+`Get-MgUser -UserId ... -Property *` → retrieves the properties for each matching user
+
+`Format-List *` → displays the returned properties
