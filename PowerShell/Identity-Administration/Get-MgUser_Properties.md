@@ -1,86 +1,51 @@
-# Dynamic Entra User Lookup
+# ============================================
+# Dynamic Entra ID User Search
+# Microsoft Graph PowerShell
+# ============================================
 
-```powershell
-# Ask for search input
+# Ask for a search string
 $Search = Read-Host "Enter part of the user's display name"
 
-# Automatically create wildcard search
+# Automatically add wildcards
 $WildcardSearch = "*$Search*"
 
-# Find users whose DisplayName contains the search string
-$Users = Get-MgUser -All -Property Id,DisplayName |
+# Get users and required properties
+$Users = Get-MgUser -All -Property Id,DisplayName,UserPrincipalName,UserType,AccountEnabled,BusinessPhones,MobilePhone |
     Where-Object {
         $_.DisplayName -like $WildcardSearch
     }
 
-# Check whether any users were found
-if ($Users.Count -eq 0) {
-    Write-Host "No users found matching '$Search'."
+# Check if users were found
+if (-not $Users) {
+
+    Write-Host ""
+    Write-Host "No users found matching: $Search" -ForegroundColor Yellow
+    Write-Host ""
+
 }
 else {
-    Write-Host "`nFound $($Users.Count) user(s):`n"
 
-    # Retrieve all properties for each matching user
+    Write-Host ""
+    Write-Host "Found $($Users.Count) user(s) matching: $Search" -ForegroundColor Green
+    Write-Host ""
+
     foreach ($User in $Users) {
 
-        Write-Host "==============================" -ForegroundColor Cyan
-        Write-Host "User: $($User.DisplayName)" -ForegroundColor Green
-        Write-Host "==============================" -ForegroundColor Cyan
+        Write-Host "============================================" -ForegroundColor Cyan
+        Write-Host "Display Name:   $($User.DisplayName)"
+        Write-Host "UPN:            $($User.UserPrincipalName)"
+        Write-Host "User Type:      $($User.UserType)"
 
-        Get-MgUser -UserId $User.Id -Property * |
-            Format-List *
+        if ($User.AccountEnabled) {
+            Write-Host "User Status:    Enabled" -ForegroundColor Green
+        }
+        else {
+            Write-Host "User Status:    Disabled" -ForegroundColor Red
+        }
+
+        Write-Host "Business Phone: $($User.BusinessPhones -join ', ')"
+        Write-Host "Mobile Phone:   $($User.MobilePhone)"
+        Write-Host "============================================" -ForegroundColor Cyan
+        Write-Host ""
     }
 }
-```
-
-### Example
-
-When you run:
-
-```powershell
-.\Search-EntraUser.ps1
-```
-
-You will be prompted:
-
-```text
-Enter part of the user's display name: alex
-```
-
-If the tenant contains:
-
-```text
-Alex Johnson
-Alex Smith
-Alexander Brown
-```
-
-the script finds all three because the search automatically becomes:
-
-```text
-*alex*
-```
-
-It then performs:
-
-```powershell
-Get-MgUser -UserId <UserId> -Property *
-```
-
-for **each matching user**, giving you their full Microsoft Graph user properties.
-
-### How they connect:
-
-`Read-Host` → collects the administrator's search string
-
-`*$Search*` → automatically creates the wildcard
-
-`Get-MgUser -All` → searches the tenant's users
-
-`Where-Object` → matches the wildcard against `DisplayName`
-
-`$User.Id` → identifies each matching Entra user
-
-`Get-MgUser -UserId ... -Property *` → retrieves the properties for each matching user
-
-`Format-List *` → displays the returned properties
