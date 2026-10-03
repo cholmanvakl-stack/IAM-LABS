@@ -1,4 +1,4 @@
-Connect-MgGraph -Property "Organization.Read.All", "User.Read.All", "Group.Read.All", "Directory.Read.All"
+Connect-MgGraph -Scopes "Organization.Read.All", "User.Read.All", "Group.Read.All", "Directory.Read.All"
 
 $Search = Read-Host "Enter part of the user display name"
 
