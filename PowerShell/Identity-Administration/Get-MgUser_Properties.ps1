@@ -1,3 +1,5 @@
+Connect-MgGraph -Property "Organization.Read.All", "User.Read.All", "Group.Read.All", "Directory.Read.All"
+
 $Search = Read-Host "Enter part of the user display name"
 
 $Wildcard = "*$Search*"
