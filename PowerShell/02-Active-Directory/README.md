@@ -10,3 +10,4 @@ Find-DisabledUsers.ps1
 
 Find-InactiveUsers.ps1
 
+Find-ExpiredAccounts.ps1
