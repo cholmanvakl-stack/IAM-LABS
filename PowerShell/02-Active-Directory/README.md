@@ -8,3 +8,5 @@ Get-ADUserLastLogon.ps1
 
 Find-DisabledUsers.ps1
 
+Find-InactiveUsers.ps1
+
