@@ -1,1 +1,4 @@
-00-Search-ADUser.ps1
+Search-ADUser.ps1
+
+Get-ADUserProperties.ps1
+
