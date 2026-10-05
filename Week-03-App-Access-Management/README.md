@@ -1,4 +1,3 @@
-Yep. Here is the same full learning-path breakdown for Implement access management for apps, based on the current Microsoft Learn path. It contains 4 modules / 2 hr 34 min and is aligned to SC-300. Microsoft Learn
 Implement access management for apps
 1. Plan and design the integration of enterprise apps for SSO
    - Discover apps with Microsoft Defender for Cloud Apps
@@ -40,16 +39,3 @@ Implement access management for apps
    - API permissions
    - App roles
    - Relationship between application objects and service principals Microsoft Learn
-The skill area I'd use for your study structure
-Since we just simplified the previous two, I'd call this:
-03 — Application Access Management
-So your SC-300 structure is starting to look very clean:
-SC-300
-│
-├── 01 - Identity Management
-│
-├── 02 - Authentication & Access Management
-│
-└── 03 - Application Access Management
-
-And importantly, Application Access Management is not just “SSO.” The learning path covers the whole application identity lifecycle: enterprise apps → SSO → app permissions → consent → provisioning → app registrations → service principals → app roles → API permissions → monitoring/governance.
