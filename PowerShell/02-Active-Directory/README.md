@@ -6,3 +6,5 @@ Get-ADUserGroups.ps1
 
 Get-ADUserLastLogon.ps1
 
+Find-DisabledUsers.ps1
+
