@@ -4,3 +4,5 @@ Get-ADUserProperties.ps1
 
 Get-ADUserGroups.ps1
 
+Get-ADUserLastLogon.ps1
+
