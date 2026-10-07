@@ -1,0 +1,3 @@
+[CmdletBinding()] param([Parameter(Mandatory)][string]$DisplayName,[Parameter(Mandatory)][string]$MailNickname,[Parameter(Mandatory)][string]$MembershipRule)
+if (-not (Get-MgContext)) { Connect-MgGraph -Scopes "Group.ReadWrite.All" | Out-Null }
+New-MgGroup -DisplayName $DisplayName -MailEnabled:$false -MailNickname $MailNickname -SecurityEnabled:$true -GroupTypes @("DynamicMembership") -MembershipRule $MembershipRule -MembershipRuleProcessingState "On"
