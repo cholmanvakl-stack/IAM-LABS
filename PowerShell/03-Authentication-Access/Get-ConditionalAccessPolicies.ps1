@@ -1,0 +1,2 @@
+if (-not (Get-MgContext)) { Connect-MgGraph -Scopes "Policy.Read.All" | Out-Null }
+Get-MgIdentityConditionalAccessPolicy -All | Select DisplayName,State,CreatedDateTime,ModifiedDateTime | Sort DisplayName | Format-Table -AutoSize
