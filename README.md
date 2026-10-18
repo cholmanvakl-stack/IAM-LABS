@@ -14,3 +14,4 @@ For every topic, learn **what it is → why it exists → how it works → when 
 **Tenant → Identity → Attributes → Groups/Roles → Authentication → Authorization → Resource → Audit/Lifecycle**
 
 > This repository currently contains concise learning notes. Labs and PowerShell will be added separately.
+3. [03 — Implement Access Management for Apps](03-Application-Access-Management/README.md) — 4 modules
