@@ -7,6 +7,19 @@
 
 Official path: https://learn.microsoft.com/en-us/training/paths/implement-authentication-access-management-solution/
 
+## How these modules connect
+
+- `Multifactor authentication (MFA)` strengthens identity verification beyond passwords.
+- `User authentication` manages authentication methods, passwordless sign-in, and self-service recovery.
+- `Conditional Access` evaluates users, devices, locations, applications, and risk signals to enforce access requirements.
+- `Identity Protection` detects and responds to risky users and sign-ins.
+- `Azure resource access management` determines which authorized identities can perform actions on Azure resources through roles and scopes.
+- `Global Secure Access` extends identity-aware access controls to supported internet and private network traffic.
+
+Together: **Authentication methods → Access policy → Risk response → Resource authorization → Secure network access.**
+
+Each module follows: Main concept → Core knowledge → How concepts connect → SC-300 exam decisions → Troubleshooting → Check understanding.
+
 ## Modules
 1. [01 — Secure users with MFA](01-Multifactor-Authentication.md)
 2. [02 — Manage user authentication](02-User-Authentication.md)
@@ -15,4 +28,3 @@ Official path: https://learn.microsoft.com/en-us/training/paths/implement-authen
 5. [05 — Azure resource access management](05-Azure-Resource-Access.md)
 6. [06 — Global Secure Access](06-Global-Secure-Access.md)
 
-Each page uses **Main concept → Core knowledge → How it connects → Exam decisions → Troubleshooting → Check understanding**. Licensing and feature availability vary by tenant and change over time; verify before implementing in production.
