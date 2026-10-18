@@ -7,6 +7,7 @@
 1. [01 — Implement an Identity Management Solution](01-Identity-Management/README.md) — 4 modules
 2. [02 — Implement an Authentication and Access Management Solution](02-Authentication-Access-Management/README.md) — 6 modules
 3. [03 — Implement Access Management for Apps](03-Application-Access-Management/README.md) — 4 modules
+4. [04 — Plan and Implement an Identity Governance Strategy](04-Identity-Governance/README.md) — 4 modules
 
 ## Study method
 For every topic, learn **what it is → why it exists → how it works → when to use it → how it connects**. Focus on scenario decisions, scope, permissions, and troubleshooting.
