@@ -15,6 +15,7 @@
 - Customizes supported sign-in pages with organization logo, background, text, and links.
 - Improves recognition and user experience; branding itself is `not` an authentication security control.
 - May require appropriate licensing for some features.
+
 `How they connect:` Branding changes the presentation of the tenant's authentication experience, not its permissions.
 
 ### Microsoft Entra roles
@@ -22,6 +23,7 @@
 - `Custom roles:` selected supported permissions assembled for a narrower administrative requirement.
 - `Role assignment:` principal + role + scope. Apply `least privilege` and limit standing Global Administrator assignments.
 - Role permissions depend on the role and assignment scope; not every role supports every scope.
+
 `How they connect:` Roles answer `who can administer what`, rather than which business applications a user can access.
 
 ### Administrative Units (AUs)
@@ -30,12 +32,14 @@
 - `AU membership alone does not grant access`; combine AU scope with a supported role assignment.
 - AUs are `not` security boundaries for application access, and they do not automatically scope every directory permission.
 - `Restricted management AUs:` specialized protection with additional management restrictions; understand the distinction from ordinary AUs.
+
 `How they connect:` Role = permitted operation; AU = which directory objects the delegated admin can manage.
 
 ### Analyze role permissions
 - Determine the requested action, target object, required permission, role, and supported scope.
 - Prefer built-in least-privilege roles before custom roles.
 - Distinguish directory roles, Azure RBAC, app roles, and group membership.
+
 `How they connect:` A role assignment only works if the role includes the required action at the target's scope.
 
 ### Custom domains
@@ -43,12 +47,14 @@
 - Verify domain ownership through the required DNS record before use.
 - A domain may be set as default; changing the default does not automatically rename existing users.
 - `UPN` is sign-in name; email address and UPN can differ.
+
 `How they connect:` Domains control sign-in namespaces, not the identity's role or resource access.
 
 ### Tenant-wide settings
 - Organization-wide settings establish defaults for identity features and collaboration.
 - Evaluate who can register applications, invite guests, or access directory features; feature-specific controls may live in separate settings.
 - Tenant-wide controls can affect many users; assess scope and impact before changing them.
+
 `How they connect:` Tenant-wide settings create broad rules; roles and scoped controls refine who can administer the tenant.
 
 ## Exam essentials
