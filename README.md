@@ -1,99 +1,33 @@
-# IAM-LABS
+# IAM-LABS — SC-300 Identity Management
 
-Microsoft Entra ID / Identity and Access Administrator (SC-300) learning, labs, PowerShell automation, troubleshooting, and portfolio documentation.
+## Main idea
+**Identity and Access Management (IAM) answers four questions: Who are you? How do we recognize you? What can you access? How is that access managed over time?**
 
-## Project Goal
+Microsoft Entra ID is the cloud identity platform. This first learning path teaches how to establish the directory, manage internal identities, collaborate with external identities, and connect on-premises Active Directory.
 
-Build practical Microsoft Entra administration skills for:
-- SC-300 exam preparation
-- IAM administrator interviews
-- real-world identity operations
-- an employer-facing GitHub portfolio
+## Learning path 01 — Implement an identity management solution
 
-## Build Model
+1. [01 — Initial Microsoft Entra Configuration](01-Initial-Entra-Configuration.md)
+2. [02 — Create, Configure, and Manage Identities](02-Manage-Identities.md)
+3. [03 — Implement and Manage External Identities](03-External-Identities.md)
+4. [04 — Implement and Manage Hybrid Identity](04-Hybrid-Identity.md)
 
-**Microsoft Learn evaluation → learning material → concise exam notes → hands-on lab → evidence → PowerShell/Graph → troubleshooting → interview practice → documentation**
+## Study method
+For every concept, learn **what it is → why it exists → how it works → when to use it → how it connects**. Focus on decisions, scope, permissions, and troubleshooting rather than memorizing portal clicks.
 
-## Roadmap
+## Core mental model
+**Tenant → Identity → Attributes → Group/Role → Authentication → Authorization → Resource → Audit/Lifecycle**
 
-| Week | Microsoft Learn path | Days |
-|---|---|---:|
-| 1 | Implement an identity management solution using Microsoft Entra ID | 4 |
-| 2 | Implement an authentication and access management solution | 6 |
-| 3 | Implement access management for apps | 4 |
-| 4 | Plan and implement an identity governance strategy | 4 |
+- **Tenant:** boundary for identities, configuration, and policies.
+- **Identity:** user, guest, device, or workload principal.
+- **Attributes:** facts describing an identity.
+- **Group/role:** organizes access or administrative permissions.
+- **Authentication:** proves identity.
+- **Authorization:** decides permitted actions.
+- **Resource:** what is accessed.
+- **Lifecycle/audit:** access changes, expires, and is reviewed.
 
-Each day contains:
-- a learning document
-- a dedicated lab
-- evidence/screenshot placeholders
-- validation criteria
-- staged troubleshooting
+## Source
+[Microsoft Learn — Implement an identity management solution](https://learn.microsoft.com/en-us/training/paths/implement-identity-management-solution/)
 
-## Repository Structure
-
-```text
-IAM-LABS/
-├── Week-01-Identity-Management/
-│   ├── D1...D4 learning
-│   └── Labs/
-├── Week-02-Authentication-&-Access-Management/
-│   ├── D1...D6 learning
-│   └── Labs/
-├── Week-03-App-Access-Management/
-│   ├── D1...D4 learning
-│   └── Labs/
-├── Week-04-Identity-Governance/
-│   ├── D1...D4 learning
-│   └── Labs/
-└── PowerShell/
-    ├── 00-Setup/
-    ├── 01-Identity-Administration/
-    ├── 02-External-Identities/
-    ├── 03-Authentication-Access/
-    ├── 04-Applications/
-    ├── 05-Governance/
-    └── 06-Hybrid-Identity/
-```
-
-## PowerShell Strategy
-
-PowerShell is the automation layer for the lab:
-- Microsoft Graph SDK
-- Microsoft Entra PowerShell
-- read-only reporting first
-- parameterized administrative actions
-- least-privilege permissions
-- repeatable identity operations
-- troubleshooting/reporting scripts
-
-Never commit credentials, secrets, access tokens, or certificates.
-
-## Evidence Strategy
-
-Labs contain placeholders for screenshots and validation evidence. Screenshots can be added during the actual lab pass without changing the learning architecture.
-
-Use evidence to show:
-1. configuration
-2. action
-3. resulting state
-4. logs/verification
-5. troubleshooting when something fails
-
-## Troubleshooting Model
-
-Default:
-
-**Identity → Scope → Policy/Role → Configuration → Logs → Resource/Application → Result**
-
-Process-specific models expand this sequence when required, for example:
-
-**Source → Scope → Engine/Agent → Errors → Connectivity → Result**
-
-## Portfolio Outcome
-
-The completed repository should demonstrate that the administrator can understand, configure, automate, troubleshoot, and explain Microsoft Entra identity and access controls rather than only memorize exam terminology.
-
-## Current Status
-
-The learning backbone, day-level labs, and initial PowerShell automation framework are built. Screenshots and tenant-specific evidence are intentionally left for the hands-on execution pass.
+> Scope: concise but conceptually complete study notes for the four Microsoft Learn modules. No labs or PowerShell in this clean restart.

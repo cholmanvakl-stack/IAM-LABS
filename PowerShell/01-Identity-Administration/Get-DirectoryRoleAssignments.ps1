@@ -1,2 +1,0 @@
-if (-not (Get-MgContext)) { Connect-MgGraph -Scopes "RoleManagement.Read.Directory","Directory.Read.All" | Out-Null }
-Get-MgRoleManagementDirectoryRoleAssignment -All | Select PrincipalId,RoleDefinitionId,DirectoryScopeId | Format-Table -AutoSize
