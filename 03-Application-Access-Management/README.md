@@ -1,11 +1,13 @@
 # Learning Path 03 — Implement Access Management for Apps
 
 ## Main concept
-`Discover applications → Integrate SSO → Define permissions → Assign access → Provision users → Monitor and govern`
+**Manage how applications integrate with Microsoft Entra ID: discover and configure enterprise applications, establish single sign-on, control permissions and consent, register applications, and monitor access.**
+
+**Application discovery → Enterprise app integration → SSO and provisioning → App registration → API permissions and consent → Access governance**
 
 Official learning path: https://learn.microsoft.com/en-us/training/paths/implement-access-management-for-apps/
 
-## Four modules
+## Modules
 1. [Plan and design enterprise app SSO integration](01-Plan-Enterprise-App-SSO.md)
 2. [Implement and monitor enterprise app SSO](02-Implement-Monitor-Enterprise-App-SSO.md)
 3. [Implement app registration](03-Implement-App-Registration.md)
