@@ -5,6 +5,10 @@
 
 [Official Microsoft Learn path](https://learn.microsoft.com/en-us/training/paths/implement-identity-management-solution/)
 
+## The mental model
+
+`Microsoft Entra tenant` is the organization's identity boundary and configuration foundation. `User identities` represent people who need access; `groups` organize those identities for scalable access management. `Administrative roles` determine who can manage directory objects, while `administrative units` can limit the scope of supported role assignments. `External identities` allow guests and partner users to collaborate across organizational boundaries. `Hybrid identity` connects on-premises Active Directory with Microsoft Entra ID so identity information and authentication can work across environments.
+
 ## How these modules connect
 
 - `Initial Microsoft Entra configuration` establishes the tenant, administrative boundaries, roles, and identity settings that all other identity operations depend on.
