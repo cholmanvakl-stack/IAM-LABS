@@ -5,7 +5,7 @@
 
 **Identity → Authentication method → Sign-in signals → Conditional Access → Risk response → Resource authorization → Monitoring**
 
-Official path: https://learn.microsoft.com/en-us/training/paths/implement-authentication-access-management-solution/
+[Official Microsoft Learn path](https://learn.microsoft.com/en-us/training/paths/implement-authentication-access-management-solution/)
 
 ## The mental model
 
@@ -20,10 +20,6 @@ Official path: https://learn.microsoft.com/en-us/training/paths/implement-authen
 - `Azure resource access management` determines which authorized identities can perform actions on Azure resources through roles and scopes.
 - `Global Secure Access` extends identity-aware access controls to supported internet and private network traffic.
 
-Together: **Authentication methods → Access policy → Risk response → Resource authorization → Secure network access.**
-
-Each module follows: Main concept → Core knowledge → How concepts connect → SC-300 exam decisions → Troubleshooting → Check understanding.
-
 ## Modules
 1. [01 — Secure users with MFA](01-Multifactor-Authentication.md)
 2. [02 — Manage user authentication](02-User-Authentication.md)
@@ -32,3 +28,4 @@ Each module follows: Main concept → Core knowledge → How concepts connect �
 5. [05 — Azure resource access management](05-Azure-Resource-Access.md)
 6. [06 — Global Secure Access](06-Global-Secure-Access.md)
 
+Each module follows: Main concept → Core knowledge → How concepts connect → SC-300 exam decisions → Troubleshooting → Check understanding.
