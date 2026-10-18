@@ -9,6 +9,7 @@
 - `Inherence:` something you are (biometric).
 - Two passwords are `not` two factors. A PIN or biometric unlocking a device-bound key can be part of a passwordless, multifactor authentication flow.
 - `Phishing-resistant MFA` uses cryptographic, origin-bound authentication (for example, FIDO2 passkeys/security keys); ordinary push/OTP is not equivalently phishing resistant.
+
 `How it connects:` Primary authentication identifies the user; a stronger authentication requirement raises confidence in that sign-in.
 
 ### Ways to require MFA
@@ -16,6 +17,7 @@
 - `Conditional Access (CA):` target users, groups, resources, and sign-in conditions; require MFA or a specific authentication strength.
 - `Per-user MFA:` legacy management approach; generally prefer Conditional Access when licensed and appropriate.
 - `Authentication methods policy:` determines which methods users are permitted to register and use. Enabling a method does not necessarily force it on every sign-in.
+
 `How it connects:` Methods policy = what can be used; CA/security defaults = when stronger authentication is required.
 
 ### Plan an MFA rollout
@@ -25,6 +27,7 @@
 4. Plan emergency-access accounts and avoid tenant-wide lockout.
 5. Roll out in stages, monitor sign-in logs and registration reports, provide support.
 6. Review service accounts and workloads: interactive MFA is not suitable for unattended application authentication.
+
 `How it connects:` Registration readiness and policy targeting must both be correct for reliable enforcement.
 
 ### Configure authentication methods
@@ -34,6 +37,7 @@
 - `Temporary Access Pass (TAP):` time-limited onboarding/recovery method to bootstrap stronger methods.
 - `SMS/voice:` available in supported scenarios but weaker against phishing/SIM attacks.
 - Users need eligible methods registered; tenant policy and licensing may restrict options.
+
 `How it connects:` Allowed methods + registered method + enforced requirement = successful MFA challenge.
 
 ### Practical decision example
