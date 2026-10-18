@@ -31,3 +31,9 @@ For every concept, learn **what it is → why it exists → how it works → whe
 [Microsoft Learn — Implement an identity management solution](https://learn.microsoft.com/en-us/training/paths/implement-identity-management-solution/)
 
 > Scope: concise but conceptually complete study notes for the four Microsoft Learn modules. No labs or PowerShell in this clean restart.
+
+## Learning path 02 — Authentication and Access Management
+
+[Open all six authentication and access management modules](02-Authentication-Access-Management/README.md)
+
+**Main concept:** Authenticate identity → evaluate sign-in context → enforce policy → manage risk → authorize resource access → monitor.
