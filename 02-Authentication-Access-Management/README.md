@@ -7,6 +7,10 @@
 
 Official path: https://learn.microsoft.com/en-us/training/paths/implement-authentication-access-management-solution/
 
+## The mental model
+
+`Authentication methods` establish how users prove their identities, while `MFA` adds additional verification. `Conditional Access` evaluates sign-in context and applies policies that determine the requirements for accessing resources. `Identity Protection` identifies risky users and sign-ins and supports risk-based responses. `Azure RBAC` determines which actions an identity can perform on Azure resources at a defined scope. `Global Secure Access` extends identity-aware controls to supported network access scenarios. Authentication verifies identity; authorization determines permitted actions.
+
 ## How these modules connect
 
 - `Multifactor authentication (MFA)` strengthens identity verification beyond passwords.
