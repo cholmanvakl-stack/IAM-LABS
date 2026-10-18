@@ -8,6 +8,7 @@
 - `Tenant:` dedicated directory instance containing users, groups, devices, applications, roles, and policies.
 - `Tenant ID:` unique GUID identifying the directory; `primary domain:` initial `*.onmicrosoft.com` namespace.
 - `Microsoft Entra role:` administrative permissions inside the directory; `Azure RBAC role:` permissions to manage Azure resources. They are not interchangeable.
+
 `How they connect:` A tenant contains identity objects and administrative boundaries; roles determine who can configure them.
 
 ### Company branding
