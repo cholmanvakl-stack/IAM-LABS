@@ -3,11 +3,15 @@
 ## Main idea
 **Identity and Access Management asks: Who are you? How do we verify you? What can you access? How is access managed over time?**
 
-## Microsoft Learn learning paths
-1. [01 — Implement an Identity Management Solution](01-Identity-Management/README.md) — 4 modules
-2. [02 — Implement an Authentication and Access Management Solution](02-Authentication-Access-Management/README.md) — 6 modules
-3. [03 — Implement Access Management for Apps](03-Application-Access-Management/README.md) — 4 modules
-4. [04 — Plan and Implement an Identity Governance Strategy](04-Identity-Governance/README.md) — 4 modules
+## SC-300 — Identity and Access Administrator Associate
+
+[SC-300 study notes](SC-300/README.md)
+
+### Microsoft Learn learning paths
+1. [01 — Implement an Identity Management Solution](SC-300/01-Identity-Management/README.md) — 4 modules
+2. [02 — Implement an Authentication and Access Management Solution](SC-300/02-Authentication-Access-Management/README.md) — 6 modules
+3. [03 — Implement Access Management for Apps](SC-300/03-Application-Access-Management/README.md) — 4 modules
+4. [04 — Plan and Implement an Identity Governance Strategy](SC-300/04-Identity-Governance/README.md) — 4 modules
 
 ## SC-200 — Security Operations Analyst Associate
 
