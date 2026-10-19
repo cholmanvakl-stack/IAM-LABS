@@ -21,6 +21,8 @@
 
 **Learning path 05:** [05 — Mitigate threats using Microsoft Defender for Cloud](SC-200/05-Mitigate-Threats-Defender-for-Cloud/README.md) — 6 Microsoft Learn modules.
 
+**Learning path 06:** [06 — Create queries for Microsoft Sentinel using KQL](SC-200/06-Create-Queries-Microsoft-Sentinel-KQL/README.md) — 4 Microsoft Learn modules.
+
 [SC-200 certification](https://learn.microsoft.com/en-us/credentials/certifications/security-operations-analyst/) · [Official learning path](https://learn.microsoft.com/en-us/training/paths/sc-200-mitigate-threats-using-microsoft-365-defender/)
 
 ## Study method
