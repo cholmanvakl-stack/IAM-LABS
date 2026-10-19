@@ -15,6 +15,8 @@
 
 **Learning path 02:** [02 — Mitigate threats using Microsoft Security Copilot](SC-200/02-Mitigate-Threats-Security-Copilot/README.md) — 5 Microsoft Learn modules.
 
+**Learning path 03:** [03 — Mitigate threats using Microsoft Purview](SC-200/03-Mitigate-Threats-Microsoft-Purview/README.md) — 4 Microsoft Learn modules.
+
 [SC-200 certification](https://learn.microsoft.com/en-us/credentials/certifications/security-operations-analyst/) · [Official learning path](https://learn.microsoft.com/en-us/training/paths/sc-200-mitigate-threats-using-microsoft-365-defender/)
 
 ## Study method
