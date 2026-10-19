@@ -1,4 +1,4 @@
-# IAM-LABS — SC-300 Study Notes
+# IAM-LABS — Microsoft Security Certification Study Notes
 
 ## Main idea
 **Identity and Access Management asks: Who are you? How do we verify you? What can you access? How is access managed over time?**
@@ -8,6 +8,12 @@
 2. [02 — Implement an Authentication and Access Management Solution](02-Authentication-Access-Management/README.md) — 6 modules
 3. [03 — Implement Access Management for Apps](03-Application-Access-Management/README.md) — 4 modules
 4. [04 — Plan and Implement an Identity Governance Strategy](04-Identity-Governance/README.md) — 4 modules
+
+## SC-200 — Security Operations Analyst Associate
+
+**Blue Team learning track:** [01 — Mitigate threats using Microsoft Defender XDR](SC-200/01-Mitigate-Threats-Microsoft-Defender-XDR/README.md) — 6 Microsoft Learn modules.
+
+[SC-200 certification](https://learn.microsoft.com/en-us/credentials/certifications/security-operations-analyst/) · [Official learning path](https://learn.microsoft.com/en-us/training/paths/sc-200-mitigate-threats-using-microsoft-365-defender/)
 
 ## Study method
 For every topic, learn **what it is → why it exists → how it works → when to use it → how it connects**. Focus on scenario decisions, scope, permissions, and troubleshooting.
@@ -24,7 +30,7 @@ For every topic, learn **what it is → why it exists → how it works → when 
 
 **Help Desk → IAM Analyst / Identity Administrator → Cybersecurity role → Blue Team, Red Team, or a hybrid specialty**
 
-This is a flexible route, not a required job sequence. You do **not** have to choose Red Team or Blue Team today.
+This is a flexible route, not a required job sequence. **Current direction: Blue Team.** IAM remains a useful entry route, but the primary target is security operations.
 
 ### The mental model
 `Identity and Access Management (IAM)` controls identities, authentication, privileges, and access. `Blue Team` protects those systems by monitoring, investigating, hardening, and responding. `Red Team` and `penetration testing` evaluate security through authorized testing; penetration testing and full adversary-emulation red teaming are related but not identical. `Purple Team` brings offensive and defensive practitioners together to test and improve detections and controls. Strong networking, operating systems, scripting, identity, and security fundamentals support all three directions.
@@ -49,7 +55,7 @@ This is a flexible route, not a required job sequence. You do **not** have to ch
 6. `Security fundamentals`: vulnerabilities, threat models, hardening, incident response, and secure configuration.
 7. `Communication`: clear evidence, reproducible findings, risk explanation, remediation, and documentation.
 
-### Explore both paths before deciding
+### Explore security disciplines with Blue Team as the priority
 
 #### Blue Team exploration
 - Investigate sample Windows/Entra sign-in events and explain what happened.
@@ -78,7 +84,7 @@ This is a flexible route, not a required job sequence. You do **not** have to ch
 | `SC-300` | Microsoft identity and access administration | Current priority |
 | `CompTIA Security+` | Broad cybersecurity fundamentals | Optional foundation; useful when required by target jobs |
 | `AZ-104` | Azure administration and cloud infrastructure | Optional for cloud security or identity engineering |
-| `SC-200` | Security operations, threat detection, and response | Consider if Blue Team work appeals |
+| `SC-200` | Security operations, threat detection, and response | Active Blue Team study track |
 | `eJPT` | Practical entry-level penetration testing | Consider if offensive assessment appeals |
 | `PNPT` | Practical network/Active Directory penetration testing | Consider after offensive-security foundations |
 | `OSCP` | Advanced practical penetration-testing skills | Later offensive-security milestone, not an immediate requirement |
