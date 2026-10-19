@@ -17,121 +17,114 @@ For every topic, learn **what it is → why it exists → how it works → when 
 
 > This repository currently contains concise learning notes. Labs and PowerShell will be added separately.
 
-## Career-Specific Section — From IAM to Cybersecurity and Penetration Testing
+## Career-Specific Section — From IAM into Cybersecurity
 
 ### Main concept
-**Use SC-300 and practical IAM experience as a bridge from Help Desk into cybersecurity, then build the technical skills and authorized testing portfolio needed for penetration testing.**
+**Use Help Desk experience and SC-300 identity knowledge to enter cybersecurity, build shared technical foundations, explore defensive and offensive security, and choose a specialization based on real hands-on experience.**
 
-**Help Desk → IAM Analyst / Identity Administrator → Cybersecurity Analyst or Security Engineer → Junior Penetration Tester → Penetration Tester / Red Team Operator**
+**Help Desk → IAM Analyst / Identity Administrator → Cybersecurity role → Blue Team, Red Team, or a hybrid specialty**
 
-This is a suggested route, not a mandatory sequence. Direct transitions into junior security testing roles are possible with sufficient practical evidence; a SOC role is not required.
+This is a flexible route, not a required job sequence. You do **not** have to choose Red Team or Blue Team today.
 
 ### The mental model
-`SC-900` demonstrates security and identity fundamentals. `SC-300` validates knowledge of implementing and managing Microsoft Entra identity, access, workload identities, and governance. `Hands-on projects` demonstrate that you can apply this knowledge. `IAM job experience` adds production operations, change control, incident response, stakeholder coordination, and business context. `Advanced certifications` should deepen the specialty you actually use at work.
+`Identity and Access Management (IAM)` controls identities, authentication, privileges, and access. `Blue Team` protects those systems by monitoring, investigating, hardening, and responding. `Red Team` and `penetration testing` evaluate security through authorized testing; penetration testing and full adversary-emulation red teaming are related but not identical. `Purple Team` brings offensive and defensive practitioners together to test and improve detections and controls. Strong networking, operating systems, scripting, identity, and security fundamentals support all three directions.
 
 ### Which jobs should I apply for?
-| Priority | Job titles to search | What to demonstrate |
+| Stage | Job titles | Why they fit |
 |---|---|---|
-| Apply immediately | IAM Analyst, Identity Access Analyst, Access Management Analyst, Identity Support Specialist | Joiner/mover/leaver tickets, group and role assignments, MFA/SSPR, access reviews, audit evidence |
-| Strong transition roles | Microsoft Entra ID Administrator, Junior IAM Administrator, Microsoft 365 Administrator, Cloud Identity Support Engineer | Conditional Access, hybrid identities, enterprise apps, provisioning, troubleshooting |
-| Stretch roles | IAM Engineer (Junior), Identity Engineer, PAM Analyst, Identity Governance Analyst | Automation, PIM, app SSO, SCIM, access packages, least privilege, operational runbooks |
-| Cybersecurity bridge | Security Analyst, SOC Analyst, Vulnerability Management Analyst, Junior Security Engineer | Alert investigation, vulnerability validation, detection, Windows/Linux, network analysis |
-| Offensive security goal | Junior Penetration Tester, Associate Security Consultant, Web Application Security Tester | Authorized assessments, clear reports, web testing, AD security, scripting |
+| Near-term bridge | IAM Analyst, Identity Support Specialist, Access Management Analyst, Junior Entra Administrator | Build security-relevant identity, access, policy, and audit experience |
+| Security entry roles | SOC Analyst, Junior Security Analyst, Vulnerability Management Analyst, Security Operations Specialist | Gain investigation, logging, risk, and response experience |
+| Engineering options | IAM Engineer, Identity Security Engineer, Junior Security Engineer | Work with controls, automation, hardening, and technical security |
+| Offensive possibilities | Junior Penetration Tester, Associate Security Consultant | Pursue after building authorized assessment and reporting skills |
+| Long-term options | Detection Engineer, Incident Responder, Threat Hunter, Penetration Tester, Red Team Operator, Security Architect | Specialize after learning which daily work you enjoy |
 
-Search variants: `IAM`, `Identity and Access Management`, `Identity Governance`, `IGA`, `Entra ID`, `Azure AD`, `SSO`, `Provisioning`, `PAM`, `Access Administration`. Some organizations use different titles for the same work.
+**Job strategy:** Apply to IAM and junior security roles in parallel. IAM is a useful bridge, not a mandatory prerequisite for security jobs.
 
-### Career roadmap after passing SC-300
+### Shared foundation before choosing a team
+1. `Networking`: TCP/IP, DNS, HTTP/S, ports, routing, firewalls, and packet analysis.
+2. `Windows and Active Directory`: authentication, Kerberos, groups, GPOs, logs, and privilege boundaries.
+3. `Linux`: shell, files, processes, permissions, services, and logs.
+4. `Scripting`: PowerShell, Python, Bash, APIs, and safe automation.
+5. `Cloud identity`: Microsoft Entra, Conditional Access, PIM, app consent, and identity risks.
+6. `Security fundamentals`: vulnerabilities, threat models, hardening, incident response, and secure configuration.
+7. `Communication`: clear evidence, reproducible findings, risk explanation, remediation, and documentation.
 
-#### Phase 1 — First 30 days: make the certification employable
-1. Add `Microsoft Certified: Identity and Access Administrator Associate` to your resume and LinkedIn **only after earning it**.
-2. Reframe existing Help Desk work accurately around identity tasks you actually perform: account lifecycle, access requests, MFA resets, group membership, account lockouts, escalations, documentation and ticket resolution.
-3. Create a concise GitHub portfolio landing page linking to identity labs, PowerShell scripts, troubleshooting runbooks and screenshots. Never publish tenant secrets, tokens, real user data or customer information.
-4. Apply to IAM Analyst, Identity Support, Entra Administrator and Microsoft 365 administration roles; do not wait for a second certification.
+### Explore both paths before deciding
 
-#### Phase 2 — Days 31–60: prove operational capability
-Build and document at least four practical scenarios:
-- `Identity lifecycle`: new hire, department transfer and departure with group, licensing and account-disable decisions.
-- `Conditional Access`: report-only policy, test identities, sign-in log analysis, exclusions and rollback.
-- `Enterprise app SSO`: gallery/non-gallery app, SAML or OIDC trust, user assignment, provisioning and failure investigation.
-- `Identity governance`: access package, approval, access review, PIM activation and audit trail.
-For each: record the business requirement, least-privilege design, configuration, validation, failure modes and remediation.
+#### Blue Team exploration
+- Investigate sample Windows/Entra sign-in events and explain what happened.
+- Create a basic detection query in a lab SIEM or log platform.
+- Analyze a simulated phishing or account-compromise incident.
+- Write an incident timeline, containment plan, and remediation report.
 
-#### Phase 3 — Days 61–90: interview and specialize
-- Practice explaining `source → scope → policy/engine → logs/errors → connectivity → target/result` when troubleshooting.
-- Prepare examples of access request approvals, role scoping, Conditional Access lockout prevention, hybrid synchronization and app consent.
-- Apply broadly and track applications, interviews, skill gaps and follow-ups.
-- Choose a specialization after seeing which job requirements recur.
+#### Red Team / penetration-testing exploration
+- Assess an intentionally vulnerable application in an authorized training environment.
+- Study web authentication and authorization flaws through PortSwigger Web Security Academy or OWASP Juice Shop.
+- Assess an isolated Active Directory lab for configuration weaknesses and explain the defenses.
+- Write a professional assessment report with scope, evidence, impact, and fixes.
 
-### Transition from IAM into penetration testing
+#### Purple Team exploration
+- Reproduce a harmless simulated security event in a lab.
+- Observe what telemetry and alerts are generated.
+- Improve the detection or configuration and retest.
+- Document what the offensive and defensive views each revealed.
 
-**Why IAM is useful:** Penetration testers regularly assess authentication, authorization, identity misconfiguration, privilege escalation paths, Active Directory and cloud identity exposure. Understanding how these systems should be secured makes it easier to assess them responsibly.
+**Safety boundary:** Test only your own lab systems or targets where you have explicit authorization. Never publish real user data, credentials, or tokens.
 
-#### Offensive security foundations
-1. `Networking`: TCP/IP, DNS, HTTP/S, routing, VPNs, firewalls, and packet analysis.
-2. `Operating systems`: Windows internals, Active Directory, Linux administration, permissions and logging.
-3. `Scripting`: Python, PowerShell and Bash for automation and analysis.
-4. `Web security`: OWASP Top 10, authentication/session design, authorization flaws and API security.
-5. `Assessment process`: scoping and written authorization, discovery, validation, evidence collection, risk explanation, remediation and retesting.
-6. `Reporting`: concise executive summaries, reproducible technical findings and prioritized fixes.
-
-#### Build a legal testing portfolio
-- [ ] Set up an isolated lab with intentionally vulnerable targets and documented authorization boundaries.
-- [ ] Document an Active Directory security assessment lab, focusing on misconfigurations and remediations.
-- [ ] Complete a web application assessment using legal training targets such as PortSwigger Web Security Academy or OWASP Juice Shop.
-- [ ] Complete a cloud identity configuration review lab with least-privilege recommendations.
-- [ ] Publish sanitized assessment reports: scope, methodology, evidence, impact, remediation and retest results.
-- [ ] Show defensive context: detection opportunities, audit logs and how administrators prevent the issue.
-
-**Important:** Only test systems you own or have explicit authorization to assess. Never publish real credentials, tokens, private data or operational secrets.
-
-### Certifications to pursue afterward
-
-| Certification | Why it fits | When to consider it |
+### Certification roadmap — choose after exploring
+| Certification | Focus | Recommendation |
 |---|---|---|
-| `SC-300` — Identity and Access Administrator Associate | Strong IAM and Microsoft Entra foundation | Finish first |
-| `CompTIA Security+` | Broad security vocabulary and foundational security knowledge | Optional; useful if security fundamentals or job postings warrant it |
-| `CompTIA Network+` | Structured networking fundamentals | Optional; learn the material even if you skip the exam |
-| `eJPT` — Junior Penetration Tester | Hands-on entry-level penetration testing workflow | Good first practical offensive-security milestone |
-| `CompTIA PenTest+` | Penetration-testing methodology and concepts | Alternative or complement depending on employer requirements |
-| `PNPT` — Practical Network Penetration Tester | Practical internal network/AD-oriented assessment and reporting | After networking, Windows/AD and basic offensive labs |
-| `OSCP` — OffSec Certified Professional | Recognized hands-on penetration-testing credential | Later, after substantial lab practice and methodology |
-| `AZ-104` — Azure Administrator Associate | Cloud infrastructure knowledge supporting cloud security assessments | Optional if cloud/Entra-focused roles dominate |
-| `SC-200` — Security Operations Analyst Associate | Detection and incident-response knowledge | Optional if taking a SOC/blue-team bridge role |
-| `SC-100` — Cybersecurity Architect Expert | Security architecture rather than direct penetration testing | Only if your long-term goals expand toward architecture |
+| `SC-900` | Security, compliance, and identity fundamentals | Completed |
+| `SC-300` | Microsoft identity and access administration | Current priority |
+| `CompTIA Security+` | Broad cybersecurity fundamentals | Optional foundation; useful when required by target jobs |
+| `AZ-104` | Azure administration and cloud infrastructure | Optional for cloud security or identity engineering |
+| `SC-200` | Security operations, threat detection, and response | Consider if Blue Team work appeals |
+| `eJPT` | Practical entry-level penetration testing | Consider if offensive assessment appeals |
+| `PNPT` | Practical network/Active Directory penetration testing | Consider after offensive-security foundations |
+| `OSCP` | Advanced practical penetration-testing skills | Later offensive-security milestone, not an immediate requirement |
+| `SC-100` | Cybersecurity architecture | Long-term option for architecture, not a default next step |
 
-**Suggested certification order:** `SC-300 → practical networking/Linux/Windows/web security → eJPT or PNPT → OSCP when ready`. Do not collect every certificate; choose based on skill gaps, cost, and real job requirements.
+**Default:** `SC-300 → IAM/security portfolio → foundational networking, Linux, scripting and logs → try both defensive and offensive labs → select the next certification based on interests and job requirements.`
 
-### Practical 90-day pivot after SC-300
-- `Days 1–30`: Keep applying to IAM jobs; study TCP/IP, HTTP, Linux and Python; set up a legal isolated lab.
-- `Days 31–60`: Learn web security fundamentals, Windows/AD attack surfaces and defensive mitigations; complete guided labs.
-- `Days 61–90`: Write two polished assessment reports, practice communicating findings, and assess readiness for eJPT/PNPT-style training.
+You do not need to collect all these certifications. Hands-on work, documented projects, and interview readiness matter.
 
-**Job search strategy:** Apply to IAM and entry-level security roles in parallel. Start targeting junior pentesting positions once you can demonstrate structured assessments and reporting, not merely tool familiarity.
+### Career roadmap after SC-300
 
-### Skills employers will want to see
-- `Directory administration`: users, groups, roles, licenses, administrative units, hybrid AD.
-- `Authentication and security`: MFA, passwordless, SSPR, Conditional Access, Identity Protection.
-- `Application access`: SAML, OIDC/OAuth, app registrations, service principals, consent, SCIM.
-- `Governance and privilege`: access reviews, entitlement management, PIM, privileged roles.
-- `Automation`: PowerShell, Microsoft Graph/Entra modules, repeatable reports and scripts.
-- `Operations`: sign-in/audit/provisioning logs, troubleshooting, ticketing, change management and documentation.
+#### Days 1–30 — Position yourself for cybersecurity
+- Update your resume accurately with SC-900, SC-300 **once earned**, and real identity-related Help Desk experience.
+- Apply to IAM Analyst, Identity Support, junior Entra and entry-level security jobs.
+- Publish a clean IAM lab portfolio and a troubleshooting runbook.
+- Begin networking, Linux, and Python fundamentals.
+
+#### Days 31–60 — Try Blue Team and Red Team
+- Complete two defensive labs: sign-in investigation and basic detection/response.
+- Complete two authorized offensive labs: web app and Windows/AD security assessment.
+- Write a short report for each, including what you observed, evidence, risk, and remediation.
+- Compare the work you enjoyed: investigating alerts, hardening systems, finding weaknesses, or improving both.
+
+#### Days 61–90 — Choose your next experiment
+- Continue IAM/security job applications and interview practice.
+- Build one deeper project in whichever area interests you most.
+- Decide whether the next study track should be `SC-200` (defensive), `eJPT/PNPT` (offensive), or more cloud/identity engineering.
+- Revisit the decision after additional labs or work experience; no need to commit permanently.
 
 ### Portfolio evidence checklist
-- [ ] Identity lifecycle automation with screenshots and safe sample data
-- [ ] Least-privilege role and administrative-unit design
-- [ ] Conditional Access policy with report-only testing and rollback plan
-- [ ] SSO application integration with token/claim troubleshooting
-- [ ] Entitlement management and access review walkthrough
-- [ ] PIM activation and emergency access design
-- [ ] PowerShell/Graph scripts with prerequisites, sample output and error handling
-- [ ] One incident-style runbook: symptoms → investigation → root cause → fix → verification
+- [ ] Identity lifecycle automation and least-privilege administration
+- [ ] Conditional Access test, validation, and rollback runbook
+- [ ] Enterprise app SSO and permission review
+- [ ] PIM, access review, and governance walkthrough
+- [ ] Windows/Entra log investigation with incident timeline
+- [ ] Simple detection or alerting lab with documented tuning
+- [ ] Authorized web or AD security assessment with remediation report
+- [ ] Python/PowerShell automation with safe sample data
+- [ ] A comparison note: what I enjoyed in Blue, Red, and Purple Team exercises
 
 ### Interview positioning
-**Your story:** Experienced Help Desk professional using Microsoft identity administration and SC-300 to transition into cybersecurity, while building a legal hands-on portfolio in Windows/Active Directory, web security, cloud identity and penetration-testing methodology.
+**Your story:** Experienced Help Desk professional who earned SC-900, is building SC-300 identity expertise, and is transitioning into cybersecurity through identity administration, security operations fundamentals, automation, and hands-on security labs.
 
-Do not claim production experience for lab-only tasks. Instead say `Built and validated in a lab` and explain what would change in production (approvals, pilot rollout, monitoring, rollback and audit).
+Distinguish production experience from lab work. Use `Built and validated in a lab` when appropriate, and explain the controls required in production.
 
 ### Certification maintenance
-Microsoft role-based certifications generally require annual renewal. Track the renewal window in Microsoft Learn and review current exam objectives before taking or renewing an exam.
+Microsoft role-based certifications generally require annual renewal. Confirm current exam objectives, prerequisites, and availability on official certification pages before scheduling.
 
-Official resources: [SC-300 certification](https://learn.microsoft.com/en-us/credentials/certifications/exams/sc-300/) · [SC-100 certification](https://learn.microsoft.com/en-us/credentials/certifications/cybersecurity-architect-expert/) · [SC-200 certification](https://learn.microsoft.com/en-us/credentials/certifications/security-operations-analyst/) · [MS-102 retirement information](https://learn.microsoft.com/en-us/credentials/certifications/m365-administrator-expert/)
+Official resources: [SC-300](https://learn.microsoft.com/en-us/credentials/certifications/exams/sc-300/) · [SC-200](https://learn.microsoft.com/en-us/credentials/certifications/security-operations-analyst/) · [SC-100](https://learn.microsoft.com/en-us/credentials/certifications/cybersecurity-architect-expert/) · [PortSwigger Web Security Academy](https://portswigger.net/web-security) · [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)
